@@ -13,7 +13,7 @@
 
 // frame counts for the zoom in, hold, and zoom out of title model
 #define INTRO_STEPS_ZOOM_IN 20
-#define INTRO_STEPS_HOLD_1 75
+#define INTRO_STEPS_HOLD_1 99
 #define INTRO_STEPS_ZOOM_OUT 91
 
 // background types
@@ -42,17 +42,17 @@ Gfx *geo_intro_super_mario_64_logo(s32 state, struct GraphNode *node, UNUSED voi
     } else if (state == 1) {
         graphNode->flags = (graphNode->flags & 0xFF) | (LAYER_OPAQUE << 8);
         scaleMat = alloc_display_list(sizeof(*scaleMat));
-        dl = alloc_display_list(4 * sizeof(*dl));
+        dl = alloc_display_list(10 * sizeof(*dl));
         dlIter = dl;
 
-        guScale(scaleMat, 2.5f, 2.5f, 0.0f); /* feel free to adjust scaling */
+        guScale(scaleMat, 3, 2, 2); /* feel free to adjust scaling */
 
         gSPMatrix(dlIter++, scaleMat, G_MTX_MODELVIEW | G_MTX_MUL | G_MTX_PUSH);
         gSPDisplayList(dlIter++, &gfx_nintendo_logo); // draw model
         gSPPopMatrix(dlIter++, G_MTX_MODELVIEW);
         gSPEndDisplayList(dlIter);
 
-        sIntroFrameCounter++;
+        sIntroFrameCounter = 10;
     }
     return dl;
 }
