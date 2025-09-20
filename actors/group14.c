@@ -12,5 +12,5 @@
 UNUSED static const u64 binid_3 = 3;
 
 #include "whomp/wallman.sou"
-#include "whomp/wallman.flk"
+#include "whomp/collision.inc.c"
 UNUSED static const u64 binid_4 = 4;

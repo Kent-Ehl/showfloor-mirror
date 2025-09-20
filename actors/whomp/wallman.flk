@@ -7,7 +7,7 @@
 /* VERTEX  TOTAL (8) */
 /* POLYGON TOTAL (12) */
 
-short wallman_info[] = {
+short wallman_uhhhhh[] = {
 
   BGCHECKCODE_POINT,8,
 	  -200,    50,   -50,

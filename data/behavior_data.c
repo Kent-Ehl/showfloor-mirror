@@ -2376,12 +2376,10 @@ const BehaviorScript bhvCelebrationStarSparkle[] = {
 
 const BehaviorScript bhvStarDust[] = {
     BEGIN(OBJ_LIST_DEFAULT),
-    BILLBOARD(),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_INT(oAnimState, -1),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_star_dust),
-        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 
@@ -2466,7 +2464,6 @@ const BehaviorScript bhvStar[] = {
     SCALE(/*Unused*/ 0, /*Field*/ 150),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_collect_star_loop),
-        ANIMATE_TEXTURE(oAnimState, 2),
     END_LOOP(),
 };
 

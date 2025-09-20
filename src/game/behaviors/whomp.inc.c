@@ -28,7 +28,7 @@ void whomp_play_sfx_from_pound_animation(void) {
 }
 
 void whomp_init(void) {
-    cur_obj_init_animation_with_accel_and_sound(0, 1.0f);
+    cur_obj_init_animation_with_accel_and_sound(0, 21.0f);
     cur_obj_set_pos_to_home();
 
     if (o->oDistanceToMario < 500.0f) {
@@ -62,7 +62,7 @@ void whomp_patrol(void) {
     f32 distWalked = cur_obj_lateral_dist_to_home();
 
     cur_obj_init_animation_with_accel_and_sound(0, 1.0f);
-    o->oForwardVel = 3.0f;
+    o->oForwardVel = 18.0f;
 
     if (distWalked > 700.0f) {
         o->oAction = WHOMP_ACT_TURN;
@@ -80,7 +80,7 @@ void whomp_patrol(void) {
 }
 
 void whomp_prepare_jump(void) {
-    o->oForwardVel = 0.0f;
+    o->oForwardVel = 2.0f;
     cur_obj_init_animation_with_accel_and_sound(1, 1.0f);
     if (cur_obj_check_if_near_animation_end()) {
         o->oAction = WHOMP_ACT_JUMP;
@@ -143,7 +143,7 @@ void whomp_on_ground_general(void) {
         o->oAngleVelRoll = 0;
 
         whomp_on_ground();
-        if (o->oTimer > 100 || (gMarioState->action == ACT_SQUISHED && o->oTimer > 30)) {
+        if (o->oTimer > 500 || (gMarioState->action == ACT_SQUISHED && o->oTimer > 1000)) {
             o->oSubAction = 10;
         }
     } else if (o->oFaceAnglePitch > 0) {
