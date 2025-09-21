@@ -112,7 +112,8 @@ s32 intro_regular(void) {
     }
     
     print_intro_text();
-
+    print_text_centered(160, 164, "PISSFLOOR");
+    print_text_centered(160, 100, "MADE BY PINKBRO5");
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
         // calls level ID 100 (or 101 adding level select bool value)
