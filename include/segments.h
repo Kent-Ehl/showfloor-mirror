@@ -12,7 +12,7 @@
  * to cast the addresses to pointers in this file, since that would be invalid
  * linker script syntax.
 */
-
+#define USE_EXT_RAM
 #define SEG_START         0x8005C000
 
 #define SEG_FRAMEBUFFERS_SIZE (2 * SCREEN_WIDTH * SCREEN_HEIGHT * 3)

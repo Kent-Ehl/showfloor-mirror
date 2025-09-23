@@ -38,5 +38,6 @@
     "23_bowser_hallway_scream_left": ["1E"],
     "24_bowser_hallway_scream_right": ["1E"],
     "30_custom_hell_ambiance": ["streamed_audio"],
-    "2D_custom_star_select": ["streamed_audio"]
+    "2D_custom_star_select": ["streamed_audio"],
+    "25_pink_rain": ["15"]
 }
