@@ -23,6 +23,14 @@ ALIGNED8 static const Texture main_tree2_txt[] = {
 #include "actors/tree/main_tree2_txt.rgba16.inc.c"
 };
 
+ALIGNED8 static const Texture pink1[] = {
+	#include "actors/tree/pink1.rgba16.inc.c"
+};
+
+ALIGNED8 static const Texture pink2[] = {
+	#include "actors/tree/pink2.rgba16.inc.c"
+};
+
 /********************************************************************************/
 /*	Vertex data.																*/
 /********************************************************************************/
