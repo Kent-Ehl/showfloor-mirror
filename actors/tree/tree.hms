@@ -4,6 +4,7 @@
 *********************************************************************************/
 
 extern Gfx  RCP_main_tree[];
+extern Gfx RCP_pink_tree[];
 
 /********************************************************************************/
 /*	Hierarchy map data of MainTree.												*/
@@ -14,4 +15,12 @@ Hierarchy RCP_HmsMainTree[] = {
 		hmsGfx(RM_SPRITE, RCP_main_tree)
 	hmsEnd()
   	hmsExit()
+};
+
+Hierarchy RCP_PinkTree[] = {
+	hmsHeader(800)
+	hmsBegin()
+		hmsGfx(RM_SPRITE, RCP_pink_tree)
+	hmsEnd()
+	hmsExit()
 };

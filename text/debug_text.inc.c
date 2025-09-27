@@ -24,7 +24,7 @@ static const struct DialogEntry debug_text_entry_0 = {
 };
 
 static const struct DialogEntry debug_text_entry_1 = {
-    1, 8, 100, 150, Debug1
+    1, 3, 100, 150, Debug1
 };
 
 const struct DialogEntry *const seg2_debug_text_table[] = {

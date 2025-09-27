@@ -104,6 +104,7 @@ extern Hierarchy RCP_HmsDotstar[];
 
 // tree
 extern Hierarchy RCP_HmsMainTree[];
+extern Hierarchy RCP_PinkTree[];
 
 // warp_collision
 extern const Collision door_seg3_collision_0301CE78[];

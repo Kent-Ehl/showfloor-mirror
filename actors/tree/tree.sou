@@ -76,3 +76,13 @@ Gfx RCP_main_tree[] = {
 	gsSPDisplayList(gfx_tree_common_reset),
 	gsSPEndDisplayList() 
 };
+
+Gfx RCP_pink_tree[] = {
+	gsSPDisplayList(gfx_tree_common_init),
+	gs_Tani_LoadTextureImage2(pink1, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+	gsSP1Triangle( 0, 1, 2, 0),
+	gs_Tani_LoadTextureImage2(pink2, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSPDisplayList(gfx_tree_common_reset),
+	gsSPEndDisplayList() 
+};

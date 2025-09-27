@@ -62,7 +62,7 @@ const LevelScript level_castle_grounds_entry[] = {
     MARIO(/*model*/ MODEL_MARIO, /*bhvParam*/ BPARAM4(0x01), /*bhv*/ bhvMario),
     JUMP_LINK(script_func_global_11),
     LOAD_MODEL_FROM_GEO(MODEL_LEVEL_GEOMETRY_03,           castle_grounds_tower_geo),
-    LOAD_MODEL_FROM_GEO(MODEL_BUBBLY_TREE,                 RCP_HmsMainTree),
+    LOAD_MODEL_FROM_GEO(MODEL_BUBBLY_TREE,                 RCP_PinkTree),
     LOAD_MODEL_FROM_GEO(MODEL_CASTLE_DOOR_WARP,            RCP_HmsMainDoor),
 
     AREA(/*index*/ 1, castle_grounds_geo),
