@@ -356,7 +356,7 @@ Gfx mat_revert_castle_grounds_RockySandMaterial[] = {
 };
 
 Gfx mat_castle_grounds_GrayscaleGrassMaterial[] = {
-	gsSPClearGeometryMode(G_LIGHTING),
+	gsSPSetLights1(castle_grounds_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -370,7 +370,6 @@ Gfx mat_castle_grounds_GrayscaleGrassMaterial[] = {
 };
 
 Gfx mat_revert_castle_grounds_GrayscaleGrassMaterial[] = {
-	gsSPSetGeometryMode(G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
