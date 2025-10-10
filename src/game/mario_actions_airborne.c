@@ -520,11 +520,8 @@ s32 act_twirling(struct MarioState *m) {
     s16 startTwirlYaw = m->twirlYaw;
     s16 yawVelTarget;
 
-    if (m->input & INPUT_A_DOWN) {
-        yawVelTarget = 0x2000;
-    } else {
         yawVelTarget = 0x1800;
-    }
+   
 
     m->angleVel[1] = approach_s32(m->angleVel[1], yawVelTarget, 350, 512);
     m->twirlYaw += m->angleVel[1];
@@ -535,6 +532,7 @@ s32 act_twirling(struct MarioState *m) {
             play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, SOUND_MARIO_YAHOO);
             if (m->vel[1] < 5.0f) {
                 m->actionArg = 1;
+                m->vel[1] = -5.0f;
             }
             break;
 
