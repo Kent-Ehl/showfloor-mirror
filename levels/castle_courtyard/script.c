@@ -16,9 +16,6 @@
 #include "levels/castle_courtyard/header.h"
 
 static const LevelScript script_func_local_1[] = {
-    OBJECT(/*model*/ MODEL_NONE, /*pos*/     0, 200, -1652, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvAmbientSounds),
-    OBJECT(/*model*/ MODEL_NONE, /*pos*/ -2700,   0, -1652, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvBirdsSoundLoop),
-    OBJECT(/*model*/ MODEL_NONE, /*pos*/  2700,   0, -1652, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00010000, /*bhv*/ bhvBirdsSoundLoop),
     RETURN(),
 };
 
@@ -47,7 +44,7 @@ const LevelScript level_castle_courtyard_entry[] = {
     JUMP_LINK(script_func_global_1),
     JUMP_LINK(script_func_global_10),
     JUMP_LINK(script_func_global_18),
-    LOAD_MODEL_FROM_GEO(MODEL_BUBBLY_TREE,           RCP_HmsMainTree),
+    LOAD_MODEL_FROM_GEO(MODEL_BUBBLY_TREE,           RCP_PurpTree),
     LOAD_MODEL_FROM_GEO(MODEL_CASTLE_DOOR_WARP,      RCP_HmsMainDoor),
 
     AREA(/*index*/ 1, courtyard_geo),

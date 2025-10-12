@@ -31,6 +31,14 @@ ALIGNED8 static const Texture pink2[] = {
 	#include "actors/tree/pink2.rgba16.inc.c"
 };
 
+ALIGNED8 static const Texture purp1[] = {
+	#include "actors/tree/purp1.rgba16.inc.c"
+};
+
+ALIGNED8 static const Texture purp2[] = {
+	#include "actors/tree/purp2.rgba16.inc.c"
+};
+
 /********************************************************************************/
 /*	Vertex data.																*/
 /********************************************************************************/
@@ -82,6 +90,16 @@ Gfx RCP_pink_tree[] = {
 	gs_Tani_LoadTextureImage2(pink1, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
 	gsSP1Triangle( 0, 1, 2, 0),
 	gs_Tani_LoadTextureImage2(pink2, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSPDisplayList(gfx_tree_common_reset),
+	gsSPEndDisplayList() 
+};
+
+Gfx RCP_purp[] = {
+	gsSPDisplayList(gfx_tree_common_init),
+	gs_Tani_LoadTextureImage2(purp1, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+	gsSP1Triangle( 0, 1, 2, 0),
+	gs_Tani_LoadTextureImage2(purp2, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
 	gsSP1Triangle( 3, 4, 5, 0),
 	gsSPDisplayList(gfx_tree_common_reset),
 	gsSPEndDisplayList() 
