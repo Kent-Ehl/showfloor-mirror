@@ -1,11 +1,11 @@
-# Project PF (pissfloor)
+# PISSFLOOR
 <img width="1091" height="327" alt="git_1" src="https://github.com/user-attachments/assets/4a7cc04c-7264-4a82-bab2-732b3b389811" />
 
 "Guaranteed as the world's most beta-est hack ever!"
 
 EST. 2024
 
-Project "pissfloor" is a parody hack meant to poke fun of Mario 64 beta hacks (e.g. mariosan's, dudaw's, bee, etc). Without the existing release of [TPP](https://github.com/Sunlitspace542/tpp-mirror) and the reimplementation which is [showfloor](https://github.com/96flashbacks/showfloor), this hack would have not been possible.
+PISSFLOOR is a parody hack meant to poke fun of Mario 64 beta hacks (e.g. mariosan's, dudaw's, bee, etc). Without the existing release of [TPP](https://github.com/Sunlitspace542/tpp-mirror) and the reimplementation which is [showfloor](https://github.com/96flashbacks/showfloor), this hack would have not been possible.
 
 ## Q&A
 
@@ -16,7 +16,7 @@ idk i made it for fun lol.
 If you want more clear progresses that will come, we invite you to join our [Discord Server.](https://discord.gg/tCmJCrc4pS)
 
 ## Credits
-### 'Piss on Floor' (2024) Credits
+### 'PISSFLOOR' (2024) Credits
 
 #### Main Programming
 - PinkBro5
