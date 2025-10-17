@@ -62,3 +62,19 @@ ALIGNED8 const Texture generic_09005000[] = {
 ALIGNED8 const Texture generic_09005800[] = {
 #include "textures/generic/generic_textures.05800.rgba16.inc.c"
 };
+
+ALIGNED8 const u8 generic_polka[] = {
+    #include "textures/generic/lll_textures.polka.rgba16.inc.c"
+};
+
+ALIGNED8 const u8 generic_brick[] = {
+    #include "textures/generic/lll_textures.brick.rgba16.inc.c"
+};
+
+ALIGNED8 const u8 generic_checkerstone[] = {
+    #include "textures/generic/lll_textures.stone.rgba16.inc.c"
+};
+
+ALIGNED8 const u8 generic_volcano[] = {
+    #include "textures/generic/lll_textures.mountain.rgba16.inc.c"
+};

@@ -375,11 +375,17 @@ DEFINE_DIALOG(DIALOG_032, 1, 4, 30, 205, _("\
 まわりをみるのはＣボタン。\n\
 おりたいときはＺボタン。"))
 
-DEFINE_DIALOG(DIALOG_033, 1, 4, 52, 200, _("\
-ようこそ\n\
-マリオワンダーランドへ\n\
-ぼうけんずきのひとは\n\
-めのまえのおしろへどうぞ"))
+DEFINE_DIALOG(DIALOG_033, 1, 5, 52, 200, _("\
+XIANPLAZZ64\n\
+AND MYSTERIO\n\
+64 I SWEAR TO\n\
+GOD IF MAKE\n\
+MY FIREND\n\
+CALL TBGN\n\
+MAD\n\
+YOU WILL\n\
+FUCKING DIE\n\
+- KYLE64"))
 
 DEFINE_DIALOG(DIALOG_034, 1, 5, 30, 205, _("\
 こんにちは！　\n\
