@@ -532,7 +532,7 @@ s32 act_twirling(struct MarioState *m) {
             play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, SOUND_MARIO_YAHOO);
             if (m->vel[1] < 5.0f) {
                 m->actionArg = 1;
-                m->vel[1] = -5.0f;
+                m->vel[1] = -10.0f;
             }
             break;
 
