@@ -20,6 +20,8 @@
  * cannon reticle, and the unused keys.
  **/
 
+char * digits;
+
 struct PowerMeterHUD {
     s8 animation;
     s16 x;
@@ -252,22 +254,73 @@ void render_hud_power_meter(void) {
 
 #define HUD_TOP_Y 210
 
+/*
+note:
+castle: invisible hud
+wf: inverted hud
+lll: final hud
+ccm: shosh
+ddd: n/a
+bowser: n/a
+*/
+
+void render_digits(void) {
+    if (gCurrLevelNum == LEVEL_LLL) {
+        digits = "%d";
+    } else {
+        digits = "%02d";
+    }
+}
+
 /**
  * Renders the amount of lives Mario has.
  */
 void render_hud_mario_lives(void) {
+    render_digits();
+    
     print_text(22, HUD_TOP_Y, ","); // 'Mario Head' glyph
     print_text(38, HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int(54, HUD_TOP_Y, "%02d", gHudDisplay.lives);
+    print_text_fmt_int(54, HUD_TOP_Y, digits, gHudDisplay.lives);
 }
 
 /**
  * Renders the amount of coins collected.
  */
 void render_hud_coins(void) {
-    print_text(242, HUD_TOP_Y, "+"); // 'Coin' glyph
-    print_text(258, HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int(271, HUD_TOP_Y, "%02d", gHudDisplay.coins);
+    // x positions
+    s16 coin_icon;
+    s16 coin_x;
+    s16 coin_disp;
+
+    // y position
+    s16 coin_y;
+
+    render_digits();
+    
+    if (gCurrLevelNum == LEVEL_WF) {
+        coin_icon = 242;
+        coin_x = 258;
+        coin_disp = 271;
+        digits = "%02d";
+    } else if (gCurrLevelNum == LEVEL_LLL | gCurrLevelNum == LEVEL_CCM) {
+        coin_icon = 170;
+        coin_x = 187;
+        coin_disp = 200;
+    } else {
+        coin_icon = 242;
+        coin_x = 258;
+        coin_disp = 271;
+    }
+
+    if (gCurrLevelNum == LEVEL_CCM) {
+        coin_y = 193;
+    } else {
+        coin_y = 210;
+    }
+    
+    print_text(coin_icon, coin_y, "+"); // 'Coin' glyph
+    print_text(coin_x, coin_y, "*"); // 'X' glyph
+    print_text_fmt_int(coin_disp, coin_y, digits, gHudDisplay.coins);
 }
 
 /**
@@ -275,9 +328,30 @@ void render_hud_coins(void) {
  * Disables "X" glyph when Mario has 100 stars or more.
  */
 void render_hud_stars(void) {
-    print_text(171, HUD_TOP_Y, "-"); // 'Star' glyph
-    print_text(187, HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int(201, HUD_TOP_Y, "%02d", gHudDisplay.stars);
+    s16 star_icon;
+    s16 star_x;
+    s16 star_disp;
+    s16 star_final_pos = GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(73);
+
+    render_digits();
+    
+    if (gCurrLevelNum == LEVEL_WF | gCurrLevelNum == LEVEL_CCM) {
+        star_icon = 170;
+        star_x = 186;
+        star_disp = 200;
+    } else if (gCurrLevelNum == LEVEL_LLL) {
+        star_icon = star_final_pos;
+        star_x = star_final_pos + 16;
+        star_disp = star_final_pos + 32;
+    } else {
+        star_icon = 171;
+        star_x = 187;
+        star_disp = 201;
+    }
+
+    print_text(star_icon, 210, "-"); // 'Star' glyph
+    print_text(star_x, 210, "*"); // 'X' glyph
+    print_text_fmt_int(star_disp, 210, digits, gHudDisplay.stars);
 }
 
 
